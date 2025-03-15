@@ -12,7 +12,8 @@ class _FormExamState extends State<FormExam> {
   String? _weight;
   String? _selectedItem;
   String? _fast;
-  bool _isChecked = false;
+  bool _isChecked1 = false;
+  bool _isChecked2 = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -73,19 +74,19 @@ class _FormExamState extends State<FormExam> {
               Column(children: [
                 CheckboxListTile(
                 title: const Text('แพ็คกิ้งพิเศษ (+20 บาท)'),
-                value: _isChecked,
+                value: _isChecked1,
                 onChanged: (value) {
                   setState(() {
-                    _isChecked = value!;
+                    _isChecked1 = value!;
                   });
                 },
               ),
               CheckboxListTile(
                 title: const Text('ประกันพัสดุ (+50 บาท)'),
-                value: _isChecked,
+                value: _isChecked2,
                 onChanged: (value) {
                   setState(() {
-                    _isChecked = value!;
+                    _isChecked2 = value!;
                   });
                 },
               ),
